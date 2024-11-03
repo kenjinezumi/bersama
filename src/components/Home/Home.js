@@ -27,6 +27,7 @@ function Home() {
           </Button>
         </Link>
       </Box>
+      
       {/* Key Sections */}
       <Box className={styles.sectionContainer}>
         <Card className={styles.card}>

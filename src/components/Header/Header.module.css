@@ -2,6 +2,7 @@
 .appBar {
     background-color: #4AA0D5; /* Primary color */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
     
 }
 

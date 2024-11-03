@@ -17,7 +17,7 @@ function Header() {
                     Bersama
                 </Typography>
 
-                {/* Navigation Links */}
+                {/* Navigation Links (visible on larger screens) */}
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
                     <Link to="/" className={styles.navLink}>
                         <Button color="inherit">{t('home')}</Button>
@@ -33,20 +33,20 @@ function Header() {
                     </Link>
                 </Box>
 
-                {/* Language Selector */}
-                <div className={styles.languageSelector}>
-                    <LanguageSelector />
-                </div>
-
-                {/* Mobile Menu Icon */}
-                <IconButton
-                    edge="end"
-                    color="inherit"
-                    aria-label="menu"
-                    className={styles.menuIcon}
-                >
-                    <MenuIcon />
-                </IconButton>
+                {/* Mobile Menu Icon and Language Selector (visible on smaller screens) */}
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <div className={styles.languageSelector}>
+                        <LanguageSelector />
+                    </div>
+                    <IconButton
+                        edge="end"
+                        color="inherit"
+                        aria-label="menu"
+                        className={styles.menuIcon}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                </Box>
             </Toolbar>
         </AppBar>
     );

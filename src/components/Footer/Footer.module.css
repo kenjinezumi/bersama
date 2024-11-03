@@ -3,6 +3,8 @@
     background-color: #f8f9fa; /* Light background for contrast */
     padding: 20px 0;
     text-align: center;
+    z-index: 1; /* Ensure it's below header but above background elements */
+    position: relative; /* Avoid fixed positioning unless necessary */
 }
 
 /* Contact section */

@@ -5,7 +5,7 @@ import { Container, Box } from '@mui/material';
 
 function Layout({ children }) {
     return (
-        <Box display="flex" flexDirection="column" minHeight="100vh">
+        <Box display="flex" flexDirection="column" minHeight="100vh" minWidth='100vh'>
             <Header />
             <Container component="main" sx={{ flexGrow: 1, py: 4 }}>
                 {children}

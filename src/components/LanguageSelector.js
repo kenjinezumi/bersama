@@ -27,6 +27,8 @@ function LanguageSelector() {
             <MenuItem value="id">Bahasa Indonesia</MenuItem>
             <MenuItem value="bn">Bangla</MenuItem>
             <MenuItem value="ms">Malay</MenuItem>
+            <MenuItem value="zh-HK">Cantonese</MenuItem>
+
         </Select>
     );
 }

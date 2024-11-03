@@ -4,13 +4,16 @@ import en from './locales/en.json';
 import id from './locales/id.json';
 import bn from './locales/bn.json';
 import ms from './locales/ms.json';
+import zhHK from './locales/zh-HK.json';
 
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     id: { translation: id },
     bn: { translation: bn },
-    ms: { translation: ms }
+    ms: { translation: ms },
+    'zh-HK': { translation: zhHK }
+
   },
   lng: 'en',
   fallbackLng: 'en',

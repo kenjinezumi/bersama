@@ -1,0 +1,61 @@
+/* Background and shadow for the AppBar */
+.appBar {
+    background-color: #4AA0D5; /* Primary color */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Styling for the Toolbar with padding adjustments */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Logo styling */
+.logo {
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* Navigation link styling */
+.navLink {
+    text-decoration: none;
+    color: white;
+    margin-right: 16px;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #A3D9B5; /* Light green accent color */
+}
+
+/* Language selector styling */
+.languageSelector {
+    color: white;
+    border-color: white;
+}
+
+.languageSelector .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+}
+
+/* Mobile menu icon styling */
+.menuIcon {
+    color: white;
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .menuIcon {
+        display: inline-flex;
+    }
+}

@@ -1,26 +1,87 @@
-/* Home.module.css */
-.home {
-    padding: 16px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-  }
-  
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    button {
-      width: auto;
-    }
-  }
-  
+/* Hero Section */
+.hero {
+  background-image: url('./hero.jpg'); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: fixed; /* Use fixed to detach from other layout constraints */
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+
+
+
+.heroText {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.heroSubText {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.heroButton {
+  background-color: #A3D9B5;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #4AA0D5;
+}
+
+/* Section Container */
+.sectionContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cardDescription {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.cardButton {
+  font-weight: bold;
+  border-color: #4AA0D5;
+  color: #4AA0D5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cardButton:hover {
+  background-color: #A3D9B5;
+  color: white;
+}

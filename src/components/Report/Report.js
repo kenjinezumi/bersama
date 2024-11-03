@@ -1,14 +1,17 @@
 import React from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 function Report() {
+    const { t } = useTranslation();
+
     return (
         <Box sx={{ p: 3 }}>
             <Typography variant="h4" gutterBottom>
-                Report an Issue
+                {t('reportIssue')}
             </Typography>
             <TextField
-                label="Describe the issue"
+                label={t('describeIssue')}
                 variant="outlined"
                 fullWidth
                 multiline
@@ -16,7 +19,7 @@ function Report() {
                 sx={{ mb: 2 }}
             />
             <Button variant="contained" color="primary">
-                Submit Report
+                {t('submitReport')}
             </Button>
         </Box>
     );

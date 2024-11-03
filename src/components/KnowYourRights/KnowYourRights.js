@@ -1,21 +1,24 @@
 import React from 'react';
 import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 function KnowYourRights() {
+    const { t } = useTranslation();
+
     return (
         <Box sx={{ p: 3 }}>
             <Typography variant="h4" gutterBottom>
-                Know Your Rights
+                {t('knowYourRights')}
             </Typography>
             <List>
                 <ListItem>
-                    <ListItemText primary="Right to fair wages" />
+                    <ListItemText primary={t('rightToFairWages')} />
                 </ListItem>
                 <ListItem>
-                    <ListItemText primary="Right to rest days" />
+                    <ListItemText primary={t('rightToRestDays')} />
                 </ListItem>
                 <ListItem>
-                    <ListItemText primary="Right to safe working conditions" />
+                    <ListItemText primary={t('rightToSafeConditions')} />
                 </ListItem>
             </List>
         </Box>

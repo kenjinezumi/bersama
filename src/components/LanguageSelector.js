@@ -1,34 +1,30 @@
+// LanguageSelector.js
 import React from 'react';
-import { Select, MenuItem } from '@mui/material';
+import { MenuItem, Select } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 function LanguageSelector() {
-    const { i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
-    const handleChange = (event) => {
-        i18n.changeLanguage(event.target.value);
-    };
+  const changeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
 
-    return (
-        <Select
-            value={i18n.language}
-            onChange={handleChange}
-            variant="outlined"
-            size="small"
-            sx={{
-                color: 'white',
-                borderColor: 'white',
-                '& .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'white',
-                },
-            }}
-        >
-            <MenuItem value="en">English</MenuItem>
-            <MenuItem value="id">Bahasa Indonesia</MenuItem>
-            <MenuItem value="bn">Bangla</MenuItem>
-            <MenuItem value="ms">Malay</MenuItem>
-        </Select>
-    );
+  return (
+    <Select
+      value={i18n.language}
+      onChange={changeLanguage}
+      variant="outlined"
+      size="small"
+    >
+      <MenuItem value="en">English</MenuItem>
+      <MenuItem value="bn">বাংলা (Bangla)</MenuItem>
+      <MenuItem value="ms">Bahasa Malaysia</MenuItem>
+      <MenuItem value="id">Bahasa Indonesia</MenuItem>
+      <MenuItem value="zh">廣東話 (Cantonese)</MenuItem>
+      <MenuItem value="ta">தமிழ் (Tamil)</MenuItem>
+    </Select>
+  );
 }
 
 export default LanguageSelector;

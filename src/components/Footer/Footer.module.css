@@ -1,0 +1,38 @@
+/* Main footer container */
+.footer {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1; /* Ensure it's below header but above background elements */
+    position: relative; /* Avoid fixed positioning unless necessary */
+}
+
+/* Contact section */
+.contactSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Footer headings for each section */
+.footerHeading {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Darker text for contrast */
+}
+
+/* Contact information text */
+.contactText {
+    color: #333;
+    margin: 4px 0;
+}
+
+/* Copyright text styling */
+.copyright {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+}

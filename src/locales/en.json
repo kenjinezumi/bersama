@@ -1,8 +1,27 @@
 {
-    "welcome": "Welcome to Bersama",
-    "reportIssue": "Report an Issue",
-    "getSupport": "Get Support",
-    "knowYourRights": "Know Your Rights",
-    "emergency": "Emergency Contacts"
-  }
-  
+  "welcome": "Welcome to Bersama",
+  "heroSubText": "Empowering Domestic Workers in Hong Kong",
+  "reportIssue": "Report an Issue",
+  "knowYourRights": "Know Your Rights",
+  "safetyEmergency": "Safety & Emergency",
+  "submitReport": "Submit Report",
+  "describeIssue": "Describe the issue",
+  "emergencyContacts": "Safety & Emergency Contacts",
+  "callForHelp": "Call our hotline or contact emergency services for immediate help.",
+  "home": "Home",
+  "rightToFairWages": "Right to fair wages",
+  "rightToRestDays": "Right to rest days",
+  "rightToSafeConditions": "Right to safe working conditions",
+  "sos": "SOS",
+  "knowYourRightsDescription": "Learn about your rights as a domestic worker to ensure fair treatment.",
+  "reportIssueDescription": "Report any issues you face at work and get the support you need.",
+  "safetyEmergencyDescription": "Access emergency contacts and resources to keep you safe.",
+  "learnMore": "Learn More",
+  "reportNow": "Report Now",
+  "accessNow": "Access Now",
+  "contactUs": "Contact Us",
+  "email": "Email: support@bersama.com",
+  "phone": "Phone: +852 1234 5678",
+  "address": "Address: 1234 Domestic Workers Road, Hong Kong",
+  "hotline": "Hotline: +852 8765 4321"
+}

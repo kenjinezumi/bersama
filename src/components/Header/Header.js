@@ -1,45 +1,52 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, IconButton, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import LanguageSelector from '../LanguageSelector';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme) => ({
-    toolbar: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-    navLinks: {
-        display: 'flex',
-        gap: theme.spacing(2),
-    },
-    link: {
-        textDecoration: 'none',
-        color: theme.palette.common.white,
-    },
-    logo: {
-        flexGrow: 1,
-        color: theme.palette.common.white,
-    },
-}));
+import MenuIcon from '@mui/icons-material/Menu';
+import { useTranslation } from 'react-i18next';
+import styles from './Header.module.css';
 
 function Header() {
-    const classes = useStyles();
+    const { t } = useTranslation();
 
     return (
-        <AppBar position="static">
-            <Toolbar className={classes.toolbar}>
-                <Typography variant="h6" className={classes.logo}>
+        <AppBar position="static" className={styles.appBar}>
+            <Toolbar className={styles.toolbar}>
+                {/* Logo or Brand Name */}
+                <Typography variant="h6" component="div" className={styles.logo}>
                     Bersama
                 </Typography>
-                <div className={classes.navLinks}>
-                    <Link to="/" className={classes.link}><Button color="inherit">Home</Button></Link>
-                    <Link to="/rights" className={classes.link}><Button color="inherit">Know Your Rights</Button></Link>
-                    <Link to="/report" className={classes.link}><Button color="inherit">Report</Button></Link>
-                    <Link to="/safety" className={classes.link}><Button color="inherit">Safety & Emergency</Button></Link>
-                </div>
-                <LanguageSelector />
+
+                {/* Navigation Links (visible on larger screens) */}
+                <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+                    <Link to="/" className={styles.navLink}>
+                        <Button color="inherit">{t('home')}</Button>
+                    </Link>
+                    <Link to="/rights" className={styles.navLink}>
+                        <Button color="inherit">{t('knowYourRights')}</Button>
+                    </Link>
+                    <Link to="/report" className={styles.navLink}>
+                        <Button color="inherit">{t('reportIssue')}</Button>
+                    </Link>
+                    <Link to="/safety" className={styles.navLink}>
+                        <Button color="inherit">{t('safetyEmergency')}</Button>
+                    </Link>
+                </Box>
+
+                {/* Mobile Menu Icon and Language Selector (visible on smaller screens) */}
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <div className={styles.languageSelector}>
+                        <LanguageSelector />
+                    </div>
+                    <IconButton
+                        edge="end"
+                        color="inherit"
+                        aria-label="menu"
+                        className={styles.menuIcon}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                </Box>
             </Toolbar>
         </AppBar>
     );

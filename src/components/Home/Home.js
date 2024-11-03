@@ -1,16 +1,23 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Box, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Home() {
-  const { t } = useTranslation();
-
-  return (
-    <div className="home">
-      <h1>{t('welcome')}</h1>
-      <button>{t('reportIssue')}</button>
-      <button>{t('getSupport')}</button>
-    </div>
-  );
+    return (
+        <Box sx={{ textAlign: 'center', p: 3 }}>
+            <Typography variant="h4" component="h1" gutterBottom>
+                Welcome to Bersama
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+                Your trusted platform for support, rights, and safety for domestic workers in Hong Kong.
+            </Typography>
+            <Link to="/report" style={{ textDecoration: 'none' }}>
+                <Button variant="contained" color="primary" sx={{ mt: 2 }}>
+                    Report an Issue
+                </Button>
+            </Link>
+        </Box>
+    );
 }
 
 export default Home;

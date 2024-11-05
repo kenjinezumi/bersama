@@ -23,5 +23,17 @@
   "email": "Email: support@bersama.com",
   "phone": "Phone: +852 1234 5678",
   "address": "Address: 1234 Domestic Workers Road, Hong Kong",
-  "hotline": "Hotline: +852 8765 4321"
+  "hotline": "Hotline: +852 8765 4321",
+  "incidentType": "Type of Incident",
+  "physicalAbuse": "Physical Abuse",
+  "verbalAbuse": "Verbal Abuse",
+  "withholdingWages": "Withholding Wages",
+  "unsafeConditions": "Unsafe Working Conditions",
+  "excessiveHours": "Excessive Working Hours",
+  "noRestDays": "Lack of Rest Days",
+  "other": "Other (please specify)",
+  "dateOfIncident": "Date of Incident",
+  "locationOfIncident": "Location of Incident",
+  "additionalComments": "Any Additional Comments"
+
 }
